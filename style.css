@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+.attribution { font-size: 11px; text-align: center; color: var(--white-clr); }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+:root {
+    --white-clr: hsl(0, 0%, 100%);
+    --white-clr-90: hsl(0, 0%, 100%, 90%);
+    --violet-clr: hsl(257, 40%, 49%);
+    --soft-magenta-clr: hsl(300, 69%, 71%);
+    --poppins-font: 'Poppins', sans-serif;
+    --open-sans-font: 'Open Sans', sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header img { height: auto; width: 100%; display: block; }
+
+.container { display: flex; }
+
+.img-container img {
+    height: auto;
+    width: 100%;
+    display: block;
+}
+
+.title { 
+    color: var(--white-clr); 
+    font-family: var(--poppins-font);
+    line-height: 1.5;
+}
+
+.description { 
+    color: var(--white-clr-90); 
+    font-family: var(--open-sans-font);
+    line-height: 1.5;
+}
+
+.register-btn {
+    border: none;
+    color: var(--violet-clr);
+    font-family: var(--poppins-font);
+    font-weight: 400;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.register-btn:hover {
+    background-color: var(--soft-magenta-clr);
+    color: var(--white-clr);
+}
+
+.social { display: flex; }
+
+.fa-brands {
+    color: var(--white-clr);
+    border-radius: 50%;
+    text-align: center;
+}
+
+.fa-brands:hover {
+    border-color: var(--soft-magenta-clr);
+    color: var(--soft-magenta-clr);
+}
+
+
+/* MEDIA QUERY */
+
+@media (max-width: 400px) {
+    body { background: var(--violet-clr) url("images/bg-mobile.svg") no-repeat; }
+
+    header { padding: 10vw 10vw 17vw; max-width: 52%; }
+
+    .container { flex-direction: column; }
+
+    .img-container { padding: 0 10vw; }
+
+    .details { text-align: center; padding: 17vw 12vw;}
+    .title { font-size: 6vw; }
+    .description { font-size: 4vw; margin-top: 4vw; }
+    
+    .register-btn {
+        padding: 3.2vw 21vw;
+        margin-top: 7.5vw;
+        font-size: 3.3vw;
+        box-shadow: 0 .5vw 0 .4vw rgba(0, 0, 0, 0.3);
+    }
+
+    .social { 
+        justify-content: center;
+        padding: 0 0 10vw 0;
+        gap: 3.5vw;
+    }
+
+    .fa-brands {
+        border: .45vw solid var(--white-clr);
+        width: 9vw;
+        padding: 2vw 0;
+        font-size: 4vw;
+    }
+}
+
+@media (min-width: 400.5px) and (max-width: 1000px) {
+    body { 
+        background: var(--violet-clr) url("images/bg-desktop.svg") no-repeat;
+        background-size: cover;
+    }
+
+    header { padding: 3.5vw 4vw 6vw; max-width: 20%; }
+    
+    .img-container,
+    .details { width: 50%; }
+
+    .img-container { width: 58%; padding: 0 0 0 4vw; }
+    
+    .details { padding: 3vw 5vw; max-width: 39.5%; }
+
+    .title { font-size: 2.2vw; }
+    .description { margin-top: 1.5vw; font-size: 1.04vw; }
+
+    .register-btn {
+        padding: 1vw 4.5vw;
+        margin-top: 1.5vw;
+        font-size: 1vw;
+        box-shadow: 0 .25vw 0 .1vw rgba(0, 0, 0, 0.3);
+    }
+
+    .social {
+        justify-content: flex-end;
+        padding: 3vw 6vw;
+        gap: 1.2vw;
+    }
+
+    .fa-brands {
+        border: .15vw solid var(--white-clr);
+        width: 3vw;
+        padding: .7vw 0;
+        font-size: 1.1vw;
+    }
+}
+
+@media (min-width: 1000.5px) {
+    body { 
+        background: var(--violet-clr) url("images/bg-desktop.svg") no-repeat;
+        background-size: cover;
+    }
+
+    header { padding: 3.5vw 4vw 6vw; max-width: 20%; }
+    
+    .img-container,
+    .details { width: 50%; }
+
+    .img-container { width: 58%; padding: 0 0 0 4vw; }
+    
+    .details { padding: 3vw 5vw; max-width: 40%; }
+
+    .title { font-size: 2.2vw; }
+    .description { margin-top: 1.5vw; font-size: 1.04vw; }
+
+    .register-btn {
+        padding: 1vw 4.5vw;
+        margin-top: 1.5vw;
+        font-size: 1vw;
+        box-shadow: 0 .25vw 0 .1vw rgba(0, 0, 0, 0.3);
+    }
+
+    .social {
+        justify-content: flex-end;
+        padding: 3vw 6vw;
+        gap: 1.2vw;
+    }
+
+    .fa-brands {
+        border: .15vw solid var(--white-clr);
+        width: 3vw;
+        padding: .7vw 0;
+        font-size: 1.1vw;
+    }
+}
